@@ -1,0 +1,107 @@
+[
+  {
+    "nombre": "Cartera Ejecutiva Classic",
+    "categoria": "cartera",
+    "talla": "mediana",
+    "color": "negro",
+    "precio": 120000
+  },
+  {
+    "nombre": "Cartera Elegance",
+    "categoria": "cartera",
+    "talla": "grande",
+    "color": "cafe",
+    "precio": 145000
+  },
+  {
+    "nombre": "Bolso Casual Urban",
+    "categoria": "bolso",
+    "talla": "grande",
+    "color": "miel",
+    "precio": 180000
+  },
+  {
+    "nombre": "Bolso Premium Dama",
+    "categoria": "bolso",
+    "talla": "mediana",
+    "color": "negro",
+    "precio": 210000
+  },
+  {
+    "nombre": "Billetera Clásica Hombre",
+    "categoria": "billetera",
+    "talla": "unica",
+    "color": "cafe",
+    "precio": 65000
+  },
+  {
+    "nombre": "Billetera Deluxe",
+    "categoria": "billetera",
+    "talla": "unica",
+    "color": "negro",
+    "precio": 85000
+  },
+  {
+    "nombre": "Morral Ejecutivo",
+    "categoria": "morral",
+    "talla": "grande",
+    "color": "negro",
+    "precio": 280000
+  },
+  {
+    "nombre": "Morral Explorer",
+    "categoria": "morral",
+    "talla": "grande",
+    "color": "cafe",
+    "precio": 295000
+  },
+  {
+    "nombre": "Portadocumentos Business",
+    "categoria": "portadocumentos",
+    "talla": "unica",
+    "color": "negro",
+    "precio": 95000
+  },
+  {
+    "nombre": "Portadocumentos Premium",
+    "categoria": "portadocumentos",
+    "talla": "unica",
+    "color": "cafe",
+    "precio": 110000
+  },
+  {
+    "nombre": "Cartera Vintage",
+    "categoria": "cartera",
+    "talla": "mediana",
+    "color": "marron",
+    "precio": 135000
+  },
+  {
+    "nombre": "Bolso Elegante Firenze",
+    "categoria": "bolso",
+    "talla": "mediana",
+    "color": "beige",
+    "precio": 195000
+  },
+  {
+    "nombre": "Billetera Compact",
+    "categoria": "billetera",
+    "talla": "unica",
+    "color": "miel",
+    "precio": 55000
+  },
+  {
+    "nombre": "Morral Traveler",
+    "categoria": "morral",
+    "talla": "grande",
+    "color": "marron",
+    "precio": 320000
+  },
+  {
+    "nombre": "Cartera BellaArte Signature",
+    "categoria": "cartera",
+    "talla": "grande",
+    "color": "vino",
+    "precio": 165000
+  }
+]
