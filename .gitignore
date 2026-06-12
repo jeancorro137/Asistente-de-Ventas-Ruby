@@ -1,4 +1,4 @@
 .venv/
 __pycache/
 .env
-voz.wav
+audio.wav

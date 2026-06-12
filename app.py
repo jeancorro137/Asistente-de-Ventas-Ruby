@@ -1,3 +1,6 @@
+import sounddevice as sd
+from scipy.io.wavfile import write
+from faster_whisper import WhisperModel
 import json
 import os
 import requests
@@ -16,6 +19,12 @@ engine = pyttsx3.init()
 
 with open("stock.json", "r", encoding="utf-8") as f:
     stock = json.load(f)
+
+whisper = WhisperModel(
+    "tiny",
+    device="cpu",
+    compute_type="int8"
+)
 
 SYSTEM_PROMPT = f"""
 Eres Ruby, una asesora virtual de ventas de ropa.
@@ -40,6 +49,37 @@ Reglas:
 Ejemplo de respuesta correcta:
 "Tenemos una camiseta negra en talla M por $35.000. Es una excelente opción. ¿Te gustaría comprarla?"
 """
+
+def escuchar():
+
+    print("\n🎤 Habla ahora...")
+
+    fs = 16000
+
+    audio = sd.rec(
+        int(5 * fs),
+        samplerate=fs,
+        channels=1,
+        dtype="int16"
+    )
+
+    sd.wait()
+
+    write("audio.wav", fs, audio)
+
+    segments, _ = whisper.transcribe(
+        "audio.wav",
+        language="es"
+    )
+
+    texto = ""
+
+    for segment in segments:
+        texto += segment.text
+
+    print(f"\nCliente: {texto}")
+
+    return texto
 
 def hablar(texto: str):
     engine.say(texto)
@@ -94,7 +134,8 @@ def main():
     print("Ruby está lista. Escribe 'salir' para terminar.\n")
 
     while True:
-        pregunta = input("Cliente: ").strip()
+        #pregunta = input("Cliente: ").strip()
+        pregunta = escuchar().strip()
 
         if pregunta.lower() == "salir":
             print("Fin del chat.")
